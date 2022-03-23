@@ -4,7 +4,7 @@ namespace EmployeeWage
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void UC1()
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
             Random random = new Random();
@@ -21,5 +21,10 @@ namespace EmployeeWage
 
             Console.ReadLine();
         }
+       
+     static void Main(string[] args)
+     {
+         Program.UC1();
+     }    
     }
 }
