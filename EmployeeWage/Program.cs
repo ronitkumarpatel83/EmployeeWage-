@@ -7,8 +7,7 @@ namespace EmployeeWage
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
-<<<<<<< HEAD
-=======
+
             Random random = new Random();
             int is_fultime = 1;
             int empCheck = random.Next(0, 2);
@@ -22,7 +21,7 @@ namespace EmployeeWage
             }
 
             Console.ReadLine();
->>>>>>> UC-1
+
         }
     }
 }
