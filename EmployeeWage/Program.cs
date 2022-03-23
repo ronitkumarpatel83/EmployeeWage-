@@ -83,9 +83,8 @@ namespace EmployeeWage
 
 
         }
-
-
-            static void Main(string[] args)
+ 
+        static void Main(string[] args)
             {
                 Program.UC1();
                 Program.UC2();
