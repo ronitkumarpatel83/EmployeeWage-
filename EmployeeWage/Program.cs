@@ -7,7 +7,7 @@ namespace EmployeeWage
         public static void UC1()
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
-
+            Console.WriteLine("Welcome to UC-1");
             Random random = new Random();
             int is_fultime = 1;
             int empCheck = random.Next(0, 2);
@@ -25,6 +25,7 @@ namespace EmployeeWage
         }
         public static void UC2()
         {
+            Console.WriteLine("Welcome to UC2");
             Random random = new Random();
             int is_fulltime = 1;
             int totalWorkingHour = 8;
@@ -49,6 +50,7 @@ namespace EmployeeWage
         }
         public static void UC3()
         {
+            Console.WriteLine("Welcome to UC3");
             Random random = new Random();
             int is_fulltime = 1;
             int is_parttime = 2;
@@ -89,5 +91,6 @@ namespace EmployeeWage
                 Program.UC2();
                 Program.UC3();
             }
+
     }
 }
