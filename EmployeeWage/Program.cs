@@ -83,9 +83,7 @@ namespace EmployeeWage
 
 
         }
-<<<<<<< HEAD
- 
-=======
+
         public static void UC4()
         {
             Console.WriteLine("Welcome to UC4");
@@ -118,8 +116,6 @@ namespace EmployeeWage
         }
 
 
-
->>>>>>> UC-4
         static void Main(string[] args)
             {
                 Program.UC1();
