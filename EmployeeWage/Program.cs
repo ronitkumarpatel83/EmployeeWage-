@@ -83,12 +83,49 @@ namespace EmployeeWage
 
 
         }
+<<<<<<< HEAD
  
+=======
+        public static void UC4()
+        {
+            Console.WriteLine("Welcome to UC4");
+            Random random = new Random();
+            int empCheck = random.Next(0, 3);
+            int is_fulltime = 1;
+            int is_parttime = 2;
+
+            int totalWorkingHour, wagePerHour = 20, dailyWage = 0;
+            switch (empCheck)
+            {
+                case 1:
+                    totalWorkingHour = 8;
+                    Console.WriteLine("Employee is Present");
+                    break;
+                case 2:
+                    totalWorkingHour = 4;
+                    Console.WriteLine("Employee is Parttime Worker");
+                    break;
+                default:
+                    totalWorkingHour = 0;
+                    Console.WriteLine("Employee is Absent");
+                    break;
+
+
+            }
+            dailyWage = wagePerHour * totalWorkingHour;
+            Console.WriteLine("Total wage is : " + dailyWage);
+            Console.ReadLine();
+        }
+
+
+
+>>>>>>> UC-4
         static void Main(string[] args)
             {
                 Program.UC1();
                 Program.UC2();
                 Program.UC3();
+                Program.UC4();
             }
 
     }
