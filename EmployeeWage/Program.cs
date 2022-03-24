@@ -83,10 +83,6 @@ namespace EmployeeWage
 
 
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> c8886398454dd23408b321595665f2820ccdfe47
         public static void UC4()
         {
             Console.WriteLine("Welcome to UC4");
@@ -159,11 +155,6 @@ namespace EmployeeWage
             Console.ReadLine();
         }
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> c8886398454dd23408b321595665f2820ccdfe47
         static void Main(string[] args)
             {
                 Program.UC1();
