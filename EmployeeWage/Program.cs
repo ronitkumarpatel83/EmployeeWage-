@@ -150,6 +150,7 @@ namespace EmployeeWage
             }
             dailyWage = wagePerHour * totalWorkingHour;
 
+            //Console.WriteLine("Total wage is : " + dailyWage);
             Console.WriteLine("Total wage is : " + dailyWage);
             Console.ReadLine();
         }
