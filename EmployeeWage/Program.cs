@@ -192,6 +192,51 @@ namespace EmployeeWage
             Console.ReadLine();
         }
 
+        public const int fullTime = 1;
+        public const int partTime = 2;
+        public const int empRatePerHour = 20;
+        public const int empWorkingDays = 20;
+        public const int workingHourLimit = 100;
+
+        public static int UC7()
+        {
+            Console.WriteLine("Welcome to UC7");
+            int empHrs = 0;
+            int totalWorkingDays = 0;
+            int totalWorkingHour = 0;
+            int present = 0, halftime = 0, absent = 0;
+
+            while (totalWorkingDays < empWorkingDays && totalWorkingHour < workingHourLimit)
+            {
+                totalWorkingDays++;
+                Random random = new Random();
+                int randomCheck = random.Next(3);
+                switch (randomCheck)
+                {
+                    case fullTime:
+                        empHrs = 8;
+                        present++;
+                        break;
+                    case partTime:
+                        empHrs = 4;
+                        halftime++;
+                        break;
+                    default:
+                        empHrs = 0;
+                        absent++;
+                        break;
+                }
+                totalWorkingHour = totalWorkingHour + empHrs;
+            }
+            int totalEmployeeWage = totalWorkingHour * empRatePerHour;
+            Console.WriteLine("Total wage of the Employee is: " + totalEmployeeWage);
+            Console.WriteLine("Total Working Hour is: " + totalWorkingHour + "Hours");
+            Console.WriteLine("Employee is present for " + present + "Days");
+            Console.WriteLine("Employee is Doing Partime for " + halftime + "Days");
+            Console.WriteLine("Employee is Absent for " + absent + "Days");
+            return totalEmployeeWage;
+        }
+
 
         static void Main(string[] args)
             {
@@ -201,6 +246,7 @@ namespace EmployeeWage
                 Program.UC4();
                 Program.UC5();
                 Program.UC6();
+                Program.UC7();
             }
 
     }
