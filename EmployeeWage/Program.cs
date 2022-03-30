@@ -289,7 +289,7 @@ namespace EmployeeWage
                 Program.UC6();
                 Program.UC7();
               
-<<<<<<< HEAD
+
             //UC8
             // UC8 main  method
             Console.WriteLine("Hello, Welcome to total employee wage calculation program ");
@@ -307,9 +307,7 @@ namespace EmployeeWage
                 Console.WriteLine("Enter TotalWorking days limit for your company: ");
                 int days = int.Parse(Console.ReadLine());
                 Program.EmployeeWage(com, sal, wlimt, days);
-=======
-           
->>>>>>> e64d42a12ed89255722624715cd345c4edf9f991
+
             }
         }
 
