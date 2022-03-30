@@ -234,7 +234,9 @@ namespace EmployeeWage
             Console.WriteLine("Employee is present for " + present + "Days");
             Console.WriteLine("Employee is Doing Partime for " + halftime + "Days");
             Console.WriteLine("Employee is Absent for " + absent + "Days");
+            Console.ReadLine();
             return totalEmployeeWage;
+            
         }
 
 
@@ -247,7 +249,26 @@ namespace EmployeeWage
                 Program.UC5();
                 Program.UC6();
                 Program.UC7();
+              
+            //UC8
+            // UC8 main  method
+            Console.WriteLine("Hello, Welcome to total employee wage calculation program ");
+            Console.WriteLine("Please enter the number of Company: ");
+            int limit = int.Parse(Console.ReadLine()), i = 0;
+            while (i < limit)
+            {
+                i++;
+                Console.WriteLine("\nEnter Company Name: ");
+                string com = Console.ReadLine();
+                Console.WriteLine("Enter Employee rate per hour: ");
+                int sal = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Employee total working hour Limit: ");
+                int wlimt = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter TotalWorking days limit for your company: ");
+                int days = int.Parse(Console.ReadLine());
+                UC8.EmployeeWage(com, sal, wlimt, days);
             }
+        }
 
     }
 }
