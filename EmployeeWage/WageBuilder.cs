@@ -9,24 +9,22 @@ namespace EmployeeWages
 {
     internal class EmpWageBuilder : Interface
     {
-      
-        //constant variables
+
         const int IS_FULL_TIME = 1;
         const int IS_PART_TIME = 2;
-        //variables
-        private int numberOfCompany = 0;
-        private CompanyEmpWage[] companyEmpWagesArray = new CompanyEmpWage[5];//Creating an array of CompanyEmpWage Object Type
+        List<CompanyEmpWage> list = new List<CompanyEmpWage>(); // creating a List having CompanyEmpWage Class Object as datatype
+
         public void AddCompany(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours) // creating class method to add company in array
         {
-            companyEmpWagesArray[numberOfCompany] = new CompanyEmpWage(companyName, wagePerHour, maxWorkingDays, maxWorkingHours);
-            numberOfCompany++;
+            var companyObj = new CompanyEmpWage(companyName, wagePerHour, maxWorkingDays, maxWorkingHours);
+            list.Add(companyObj); //Adding company to List
         }
         public void IterateOverListOfCompany()
         {
-            for (int i = 0; i < numberOfCompany; i++)
+            for (int i = 0; i < list.Count; i++)
             {
                 //companyEmpWagesArray[i].setTotalEmpWage(ComputeWage(companyEmpWagesArray[i]));
-                ComputeWage(companyEmpWagesArray[i]);
+                ComputeWage(list[i]);
             }
         }
         public int ComputeWage(CompanyEmpWage obj) //Creating a class method for Wage Computation with parameters

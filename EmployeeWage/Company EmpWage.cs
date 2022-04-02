@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace EmployeeWage
 {
     internal class CompanyEmpWage 
-    {
-        //Variables
+    {   
+        //Variable
         public string companyName;
         public int wagePerHour, maxWorkingDays, maxWorkingHours, totalEmpMonthWage;
-
         public CompanyEmpWage(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours) // CompanyEmpWage class constructor with arguments
         {
             this.companyName = companyName;
