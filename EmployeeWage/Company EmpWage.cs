@@ -10,7 +10,7 @@ namespace EmployeeWage
     {
         //Variables
         public string companyName;
-        public int wagePerHour, maxWorkingDays, maxWorkingHours, totalEmpMonthWage;
+        public int wagePerHour, maxWorkingDays, maxWorkingHours, totalMonthWage;
         public CompanyEmpWage(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours) // CompanyEmpWage class constructor with arguments
         {
             this.companyName = companyName;
@@ -18,9 +18,9 @@ namespace EmployeeWage
             this.maxWorkingDays = maxWorkingDays;
             this.maxWorkingHours = maxWorkingHours;
         }
-        public void setTotalEmpWage(int totalEmpMonthWage) // Creating method to just set Total Wage of Employee
+        public void setTotalEmpWage(int totalMonthWage) // Creating method to just set Total Wage of Employee
         {
-            this.totalEmpMonthWage = totalEmpMonthWage;
+            this.totalMonthWage = totalMonthWage;
         }
         public override string ToString()
         {

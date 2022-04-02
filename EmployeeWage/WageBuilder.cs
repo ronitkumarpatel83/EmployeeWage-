@@ -24,8 +24,8 @@ namespace EmployeeWage
         {
             for (int i = 0; i < list.Count; i++)
             {
-                //companyEmpWagesArray[i].setTotalEmpWage(ComputeWage(companyEmpWagesArray[i]));
-                ComputeWage(list[i]);
+                list[i].setTotalEmpWage(ComputeWage(list[i]));
+                // ComputeWage(list[i]);
             }
         }
         public int ComputeWage(CompanyEmpWage obj) //Creating a class method for Wage Computation with parameters
@@ -74,6 +74,10 @@ namespace EmployeeWage
             Console.WriteLine($"Employee total working hours for {obj.companyName} company is : {empTotalHour}\n");
             Console.WriteLine($"Employee Total Month Wage for {obj.companyName} company is : {totalMonthWage}\n");
             return totalMonthWage;
+        }
+        public int getTotalWage(string company) //Creating method to get Total Wage queried by Companies
+        {
+            return dictionary[company].totalMonthWage;//Returning Total Wage of Employee
         }
     }
 }

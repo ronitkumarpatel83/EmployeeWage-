@@ -16,6 +16,8 @@ namespace EmployeeWage
             empWageBuilder.AddCompany("RKP", 20, 20, 100);
             empWageBuilder.AddCompany("DPJ", 40, 25, 100);
             empWageBuilder.IterateOverListOfCompany();
+            Console.WriteLine($"\nTotal Wage for RKP company is : {empWageBuilder.getTotalWage("RKP")}");
+            Console.WriteLine($"\nTotal Wage for DPJ company is : {empWageBuilder.getTotalWage("DPJ")}");
             Console.ReadLine();
         }
     }
