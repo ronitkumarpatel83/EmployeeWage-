@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage
 {
-    internal class CompanyEmpWage
+    internal class CompanyEmpWage 
     {
         //Variables
         public string companyName;

@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 
 namespace EmployeeWages
 {
-    internal class EmpWageBuilder
+    internal class EmpWageBuilder : Interface
     {
+      
         //constant variables
         const int IS_FULL_TIME = 1;
         const int IS_PART_TIME = 2;
         //variables
         private int numberOfCompany = 0;
         private CompanyEmpWage[] companyEmpWagesArray = new CompanyEmpWage[5];//Creating an array of CompanyEmpWage Object Type
-
         public void AddCompany(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours) // creating class method to add company in array
         {
             companyEmpWagesArray[numberOfCompany] = new CompanyEmpWage(companyName, wagePerHour, maxWorkingDays, maxWorkingHours);
             numberOfCompany++;
         }
-
         public void IterateOverListOfCompany()
         {
             for (int i = 0; i < numberOfCompany; i++)
@@ -30,7 +29,7 @@ namespace EmployeeWages
                 ComputeWage(companyEmpWagesArray[i]);
             }
         }
-        private int ComputeWage(CompanyEmpWage obj) //Creating a class method for Wage Computation with parameters
+        public int ComputeWage(CompanyEmpWage obj) //Creating a class method for Wage Computation with parameters
         {
             int empWorkHour = 0, empDailyWage = 0, empTotalHour = 0, empTotalWorkDays = 0, totalMonthWage = 0;
             Random random = new Random(); // Creating object of Random class
