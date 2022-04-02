@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeWages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,13 @@ namespace EmployeeWage
     internal class Program
     {
         static void Main(string[] args)
-
         {
-            Console.WriteLine("Hello, Welcome to Employeewages problem ");
-            WageBuilder obj = new WageBuilder("Dmart", 20, 100, 20);
-            obj.ComputeEmployeeWage();
-            Console.WriteLine(obj.toString());
-            WageBuilder obj1 = new WageBuilder("RMart", 10, 120, 21);
-            obj1.ComputeEmployeeWage();
-            Console.WriteLine(obj1.toString());
-
+            Console.WriteLine("Welcome to Employee Wage Compuatation Program\n");
+            EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+            empWageBuilder.AddCompany("RKP", 20, 20, 100);
+            empWageBuilder.AddCompany("DPJ", 40, 25, 100);
+            empWageBuilder.IterateOverListOfCompany();
+            Console.ReadLine();
         }
     }
 }
