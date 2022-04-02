@@ -1,4 +1,4 @@
-﻿using EmployeeWages;
+﻿using EmployeeWage;
 using System;
 using System.Collections.Generic;
 using System.Linq;

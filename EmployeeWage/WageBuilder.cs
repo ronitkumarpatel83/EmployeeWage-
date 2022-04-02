@@ -1,23 +1,24 @@
-﻿using EmployeeWage;
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeWages
+namespace EmployeeWage
 {
     internal class EmpWageBuilder : Interface
     {
-
+        //constant variables
         const int IS_FULL_TIME = 1;
         const int IS_PART_TIME = 2;
         List<CompanyEmpWage> list = new List<CompanyEmpWage>(); // creating a List having CompanyEmpWage Class Object as datatype
-
+        IDictionary<string, CompanyEmpWage> dictionary = new Dictionary<string, CompanyEmpWage>(); //Creating Dictionary having Company And Employee total Wage
         public void AddCompany(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours) // creating class method to add company in array
         {
             var companyObj = new CompanyEmpWage(companyName, wagePerHour, maxWorkingDays, maxWorkingHours);
             list.Add(companyObj); //Adding company to List
+            dictionary.Add(companyName, companyObj); //Adding value to dictionary
         }
         public void IterateOverListOfCompany()
         {
